@@ -1,0 +1,89 @@
+/* style.css */
+
+/* Basic reset and full-screen centering using Flexbox */
+body {
+    /* Ensures the body takes up at least the full height of the screen */
+    min-height: 100vh; 
+    
+    /* Removes default browser margins that can interfere */
+    margin: 0; 
+}
+
+
+/* The centered rectangle container */
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Subtle shadow for depth */
+    box-shadow: 0 10px 25px rgba(0, 50, 100, 0.1); 
+    width: 350px;
+    text-align: center;
+    border-top: 5px solid #007bff; /* Accent color for a clean look */
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-group input {
+    width: 95%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-text {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.9em;
+    height: 1.2em;
+    margin: 10px 0 0;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
