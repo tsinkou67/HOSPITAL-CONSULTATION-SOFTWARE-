@@ -1,0 +1,40 @@
+// script.js
+
+// Function called when the user clicks the "Log In" button
+function validateForm() {
+    // 🔑 JavaScript gets (selects) the HTML elements by their IDs
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('error-message');
+
+    // Get the actual values
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+
+    // Reset error message
+    errorMessage.textContent = "";
+
+    // --- Validation Logic ---
+
+    if (username.length === 0) {
+        errorMessage.textContent = "Please enter your username or email.";
+        usernameInput.focus(); // Focus on the empty field
+        return false; // Stop form submission
+    }
+
+    if (password.length < 8) {
+        errorMessage.textContent = "Password must be at least 8 characters long.";
+        passwordInput.focus(); // Focus on the empty field
+        return false; // Stop form submission
+    }
+    
+    // --- If validation passes ---
+    
+    // In a real application, you would now use the Fetch API or XMLHttpRequest 
+    // to send the credentials securely to the server (your Java back-end).
+    
+    // For this example, we'll just show a success message and stop the submission.
+    alert("Login attempt successful! Sending data to server for verification...");
+
+    return false; // Set to 'false' to prevent the page from refreshing for this demo
+}
